@@ -16,13 +16,14 @@ const Box = ({
   };
   return (
     <div
-      className={`relative w-12 h-12 ${black ? "bg-gray-500" : "bg-gray-50"}
+      className={`relative w-12 h-12 
         grid place-items-center
       ${
         knightPos === pos
           ? "bg-blue-600"
           : `${possible && "border-4 border-green-600 bg-green-400"}`
       }
+      ${black ? "bg-gray-500" : "bg-gray-50"}
       `}
       onClick={handleClick}
     >
