@@ -21,10 +21,12 @@ const Box = ({
       ${
         knightPos === pos
           ? "bg-blue-600"
-          : `${possible && "border-4 border-green-600 bg-green-400"}`
-      }
-      ${black ? "bg-gray-500" : "bg-gray-50"}
-      `}
+          : `${
+              possible
+                ? "border-4 border-green-600 bg-green-400"
+                : `${black ? "bg-gray-500" : "bg-gray-50"}`
+            }`
+      }`}
       onClick={handleClick}
     >
       {knightPos === pos && (
