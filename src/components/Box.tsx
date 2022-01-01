@@ -17,12 +17,14 @@ const Box = ({
   return (
     <div
       className={`relative w-12 h-12 ${black ? "bg-gray-500" : "bg-gray-50"} ${
-        possible && "bg-green-400"
-      } ${horsePos === pos && "bg-blue-400"} grid place-items-center`}
+        possible && "border-4 border-green-600 bg-green-400"
+      } ${horsePos === pos && "bg-blue-600"} grid place-items-center`}
       onClick={handleClick}
     >
       {horsePos === pos && (
-        <div className="font-semibold pointer-events-none">H</div>
+        <div className="text-gray-50 font-bold pointer-events-none border-2 rounded-full px-2 py-1">
+          H
+        </div>
       )}
     </div>
   );
