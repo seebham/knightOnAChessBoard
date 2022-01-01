@@ -29,9 +29,9 @@ function App() {
       let y = yCurr + verticalMoves[playInd];
 
       if (
-        x > 0 &&
+        x >= 0 &&
         x < CHESSBOARD_DIMENSIONS[0] &&
-        y > 0 &&
+        y >= 0 &&
         y < CHESSBOARD_DIMENSIONS[1]
       ) {
         setPossibleMoves((prevMoves) => {
