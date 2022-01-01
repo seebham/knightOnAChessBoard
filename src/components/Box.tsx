@@ -23,7 +23,7 @@ const Box = ({
     >
       {knightPos === pos && (
         <div className="text-gray-50 font-bold pointer-events-none border-2 rounded-full px-2 py-1">
-          H
+          K
         </div>
       )}
     </div>

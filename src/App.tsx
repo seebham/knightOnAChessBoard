@@ -111,7 +111,7 @@ function App() {
         <div className="flex flex-row justify-start items-center gap-2">
           <div className="w-12 h-12 bg-blue-600 grid place-content-center">
             <span className="text-gray-50 font-bold pointer-events-none border-2 rounded-full px-2 py-1">
-              H
+              K
             </span>
           </div>
           - Position of the Knight
