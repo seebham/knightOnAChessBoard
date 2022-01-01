@@ -1,27 +1,27 @@
 const Box = ({
   pos,
-  horsePos,
+  knightPos,
   black,
-  changeHorsePos,
+  changeKnightPos,
   possible,
 }: {
   pos: string;
-  horsePos: string;
+  knightPos: string;
   black?: boolean;
-  changeHorsePos: (newPosition: string) => void;
+  changeKnightPos: (newPosition: string) => void;
   possible?: boolean;
 }) => {
   const handleClick = () => {
-    changeHorsePos(pos);
+    changeKnightPos(pos);
   };
   return (
     <div
       className={`relative w-12 h-12 ${black ? "bg-gray-500" : "bg-gray-50"} ${
         possible && "border-4 border-green-600 bg-green-400"
-      } ${horsePos === pos && "bg-blue-600"} grid place-items-center`}
+      } ${knightPos === pos && "bg-blue-600"} grid place-items-center`}
       onClick={handleClick}
     >
-      {horsePos === pos && (
+      {knightPos === pos && (
         <div className="text-gray-50 font-bold pointer-events-none border-2 rounded-full px-2 py-1">
           H
         </div>

@@ -3,20 +3,20 @@ import Box from "./components/Box";
 
 function App() {
   const CHESSBOARD_DIMENSIONS = [8, 8];
-  const [horsePos, setHorsePos] = useState<string>("");
+  const [knightPos, setKnightPos] = useState<string>("");
   const [possibleMoves, setPossibleMoves] = useState<string[]>();
 
-  const handleChangeHorsePos = (newPosition: string) => {
-    setHorsePos(newPosition);
+  const handleChangeKnightPos = (newPosition: string) => {
+    setKnightPos(newPosition);
     findPossiblePositions(newPosition);
   };
 
   const findPossiblePositions = (hPos: string) => {
-    // current horse pos
+    // current knight pos
     let xCurr = parseInt(hPos[0]);
     let yCurr = parseInt(hPos[2]);
 
-    // plays of horse
+    // plays of knight
     let horizontalMoves = [1, 2, 2, 1, -1, -2, -2, -1];
     let verticalMoves = [2, 1, -1, -2, -2, -1, 1, 2];
 
@@ -53,9 +53,9 @@ function App() {
           ? Boxes.push(
               <Box
                 pos={`${i} ${j}`}
-                horsePos={horsePos}
+                knightPos={knightPos}
                 key={`${i} + ${j}`}
-                changeHorsePos={handleChangeHorsePos}
+                changeKnightPos={handleChangeKnightPos}
                 possible={
                   possibleMoves && possibleMoves?.indexOf(`${i} ${j}`) > -1
                 }
@@ -64,10 +64,10 @@ function App() {
           : Boxes.push(
               <Box
                 pos={`${i} ${j}`}
-                horsePos={horsePos}
+                knightPos={knightPos}
                 key={`${i} + ${j}`}
                 black
-                changeHorsePos={handleChangeHorsePos}
+                changeKnightPos={handleChangeKnightPos}
                 possible={
                   possibleMoves && possibleMoves?.indexOf(`${i} ${j}`) > -1
                 }
@@ -77,10 +77,10 @@ function App() {
         ? Boxes.push(
             <Box
               pos={`${i} ${j}`}
-              horsePos={horsePos}
+              knightPos={knightPos}
               key={`${i} + ${j}`}
               black
-              changeHorsePos={handleChangeHorsePos}
+              changeKnightPos={handleChangeKnightPos}
               possible={
                 possibleMoves && possibleMoves?.indexOf(`${i} ${j}`) > -1
               }
@@ -89,9 +89,9 @@ function App() {
         : Boxes.push(
             <Box
               pos={`${i} ${j}`}
-              horsePos={horsePos}
+              knightPos={knightPos}
               key={`${i} + ${j}`}
-              changeHorsePos={handleChangeHorsePos}
+              changeKnightPos={handleChangeKnightPos}
               possible={
                 possibleMoves && possibleMoves?.indexOf(`${i} ${j}`) > -1
               }
