@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Box from "./components/Box";
 
 function App() {
-  const CHESSBOARD_DIMENTIONS = [8, 8];
+  const CHESSBOARD_DIMENSIONS = [8, 8];
   const [horsePos, setHorsePos] = useState<string>("");
   const [possibleMoves, setPossibleMoves] = useState<string[]>();
 
@@ -30,9 +30,9 @@ function App() {
 
       if (
         x > 0 &&
-        x < CHESSBOARD_DIMENTIONS[0] &&
+        x < CHESSBOARD_DIMENSIONS[0] &&
         y > 0 &&
-        y < CHESSBOARD_DIMENTIONS[1]
+        y < CHESSBOARD_DIMENSIONS[1]
       ) {
         setPossibleMoves((prevMoves) => {
           let newMove = `${x} ${y}`;
@@ -46,8 +46,8 @@ function App() {
   };
 
   const Boxes = [];
-  for (let i = 0; i < CHESSBOARD_DIMENTIONS[0]; i++) {
-    for (let j = 0; j < CHESSBOARD_DIMENTIONS[1]; j++) {
+  for (let i = 0; i < CHESSBOARD_DIMENSIONS[0]; i++) {
+    for (let j = 0; j < CHESSBOARD_DIMENSIONS[1]; j++) {
       i % 2 === 0
         ? j % 2 === 0
           ? Boxes.push(
